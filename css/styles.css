@@ -111,7 +111,7 @@ body {
 .header__nav-item:hover,
 .header__nav-list .active,
 .header__nav-item:focus,
-.web {
+.logo__studio {
     color: var(--blue-font);
 }
 
@@ -413,7 +413,7 @@ body {
 
 /* nasze atuty */
 
-.advantages__list {
+.advantages {
     display: flex;
     gap: 30px;
     margin: 0;
@@ -734,7 +734,7 @@ body {
     background: var(--dark-background);
 }
 
-.footer__lower-logo {
+.logo__studio--white {
     color: var(--white-font);
 }
 
