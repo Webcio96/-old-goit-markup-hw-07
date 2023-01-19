@@ -1,5 +1,5 @@
 .header {
-    border-bottom: 1px solid var(--border-header);
+    border-bottom: 1px solid $border-header;
 
     &__wrapper {
         display: flex;
@@ -12,6 +12,7 @@
     &__nav {
         display: flex;
         align-items: center;
+        gap: 93px;
     }
 
     &__nav-list {
@@ -25,4 +26,76 @@
         display: flex;
         gap: 50px;
     }
+
+    &__contacts-item-icon {
+        fill: $grey-font;
+        margin-right: 10px;
+    }
+
+    &__contacts-item > &__contacts-item-icon {
+        &:hover,
+        &:focus {
+            fill: $blue-font;
+        }
+    }
+
+    &__nav-item {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        text-decoration: none;
+        color: $deafult-dark-font;
+        &:hover,
+        &:focus {
+            color: $blue-font;
+        }
+    }
+
+    &__nav-item {
+        &--active {
+            color: $blue-font;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.14;
+            transition-property: color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            &::after {
+                content: '';
+                position: relative;
+                display: block;
+                top: 30px;
+                height: 4px;
+                width: 100%;
+                border-radius: 2px;
+                background-color: $blue-font;
+                color: $blue-font;
+            }
+        }
+    }
+
+    &__contacts-item {
+        color: $grey-font;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            color: $blue-font;
+        }
+    }
+}
+
+.header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

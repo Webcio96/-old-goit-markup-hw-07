@@ -1,2 +1,4 @@
-@import url(variables);
-@import url(header);
+@import './utils/variables';
+@import './utils/globals';
+@import './components/header';
+@import './components/logo';
