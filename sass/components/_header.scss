@@ -1,0 +1,28 @@
+.header {
+    border-bottom: 1px solid var(--border-header);
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 24px 0 25px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav-list {
+        list-style-type: none;
+        gap: 46px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__contacts {
+        display: flex;
+        gap: 50px;
+    }
+}
