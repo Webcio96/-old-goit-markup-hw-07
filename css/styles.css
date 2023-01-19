@@ -108,9 +108,9 @@ body {
     color: var(--logo-font);
 }
 
-.header__nav-item:hover,
-.header__nav-list .active,
-.header__nav-item:focus,
+.header__nav-item a:hover,
+.header__nav-list .header__nav-item--active,
+.header__nav-item a:focus,
 .logo__studio {
     color: var(--blue-font);
 }
@@ -126,7 +126,7 @@ body {
     text-decoration: none;
 }
 
-.active::after {
+.header__nav-item--active::after {
     content: '';
     position: relative;
     display: block;
@@ -137,7 +137,7 @@ body {
     background-color: var(--blue-font);
 }
 
-.active::after li {
+.header__nav-item--active::after li {
     width: 100%;
 }
 
@@ -491,7 +491,7 @@ body {
 
 /* nasz zespół */
 
-.grey-bg {
+.our-team {
     background-color: var(--white-background);
 }
 
@@ -567,14 +567,14 @@ body {
     fill: var(--white-font);
 }
 
-.clients__list {
+.clients {
     display: flex;
     justify-content: center;
     list-style-type: none;
     gap: 30px;
 }
 
-.clients__list > li {
+.clients__item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -584,11 +584,11 @@ body {
     border-radius: 4px;
 }
 
-.client__item > use {
+.client__icon > use {
     fill: var(--social-color);
 }
 
-.clients__list > li:is(:hover, :focus) {
+.clients__item:is(:hover, :focus) {
     border: 1px solid var(--blue-font);
 
     transition-property: border;
@@ -596,7 +596,7 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients__list > li:is(:hover, :focus) > .client__item use {
+.clients__item:is(:hover, :focus) > .client__icon use {
     fill: var(--blue-font);
 
     transition-property: fill;
