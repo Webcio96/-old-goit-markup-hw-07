@@ -1,0 +1,78 @@
+.our-team {
+    background-color: $white-background;
+
+    &__list {
+        display: flex;
+        padding: 0;
+        gap: 30px;
+        margin: 0;
+        list-style-type: none;
+        justify-content: center;
+    }
+
+    &__item {
+        background-color: $white-font;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__workers-name {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.18;
+        text-align: center;
+        display: block;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+
+    &__workplace {
+        font-size: 16px;
+        line-height: 1.18;
+        color: $grey-font;
+        text-align: center;
+        display: block;
+        padding-bottom: 16px;
+        margin: 0;
+    }
+
+    &__social-list {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 0px 0px 30px 0px;
+    }
+
+    &__social-item use {
+        fill: $social-color;
+    }
+
+    &__social-list a {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        &:hover,
+        &:focus {
+            background-color: $blue-font;
+            transition-property: background-color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+    &__social-list a > &__social-item use {
+        &:hover,
+        &:focus {
+            transition-property: fill;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            fill: $white-font;
+        }
+    }
+}
